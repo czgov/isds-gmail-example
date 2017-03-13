@@ -1,0 +1,43 @@
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container">
+    <h1>Message #{{headers.isds-id}} - {{headers.isds-subject}}</h1>
+
+    <div class="row">
+        <div class="col-md-5">
+            <table class="table table-condensed table-bordered">
+                <tr>
+                    <th>From</th>
+                    <td>({{headers.isds-from.identity}}) (#{{headers.isds-from.dataBoxID}}), {{headers.isds-from.address}} </td>
+                </tr>
+                <tr>
+                    <th>To</th>
+                    <td>({{headers.isds-to.identity}}) (#{{headers.isds-to.dataBoxID}}), {{headers.isds-to.address}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <br/>
+    <p>See {{headers.attachments.size}} attached files:</p>
+    <ul>
+        {{#headers.attachments}}
+            <li>{{key}}</li>
+        {{/headers.attachments}}
+    </ul>
+
+    <p><i>This e-mail is sent by demo application using
+        <strong>Apache Camel</strong> and component <a href="https://github.com/czgov/camel-isds/"><strong>Camel ISDS</strong></a>.</i>
+    </p>
+</div>
+
+</body>
+</html>
