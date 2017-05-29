@@ -9,18 +9,18 @@
 
 <body>
 <div class="container">
-    <h1>Message #{{headers.isds-id}} - {{headers.isds-subject}}</h1>
+    <h1>Message #{{headers.isdsId}} - {{headers.isdsSubject}}</h1>
 
     <div class="row">
         <div class="col-md-5">
             <table class="table table-condensed table-bordered">
                 <tr>
                     <th>From</th>
-                    <td>({{headers.isds-from.identity}}) (#{{headers.isds-from.dataBoxID}}), {{headers.isds-from.address}} </td>
+                    <td>({{headers.isdsFrom.identity}}) (#{{headers.isdsFrom.dataBoxID}}), {{headers.isdsFrom.address}} </td>
                 </tr>
                 <tr>
                     <th>To</th>
-                    <td>({{headers.isds-to.identity}}) (#{{headers.isds-to.dataBoxID}}), {{headers.isds-to.address}} </td>
+                    <td>({{headers.isdsTo.identity}}) (#{{headers.isdsTo.dataBoxID}}), {{headers.isdsTo.address}} </td>
                 </tr>
             </table>
         </div>

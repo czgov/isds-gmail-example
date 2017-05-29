@@ -33,7 +33,7 @@ bin/fuse
 2. instal [camel-isds](https://github.com/czgov/camel-isds) component 
 ```bash
 # download features.xml from maven central
-JBossFuse:karaf@root> features:addurl mvn:com.github.czgov/camel-isds/0.1.0/xml/features
+JBossFuse:karaf@root> features:addurl mvn:com.github.czgov/camel-isds/0.2.0/xml/features
 
 # download jars and install into Fuse
 JBossFuse:karaf@root> features:install camel-isds
@@ -41,7 +41,7 @@ JBossFuse:karaf@root> features:install camel-isds
 # optionally verify features are installed
 JBossFuse:karaf@root> features:list | grep isds
 [installed  ] [1.1.0                ] isds                                          javaisds-1.1.0                         
-[installed  ] [0.1.0-SNAPSHOT       ] camel-isds                                    camel-isds-0.1.0   
+[installed  ] [0.2.0                ] camel-isds                                    camel-isds-0.2.0   
 ```
 
 3. put following configuration into `$FUSE_HOME/etc/isds.mail.cfg`:
